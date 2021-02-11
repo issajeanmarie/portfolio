@@ -67,7 +67,7 @@ class Oriented extends React.Component {
 
 		const Button = styled.div`
 			background: rgba(0,0,0,0.3);
-			margin: 13% auto;
+			margin: 10% auto;
 			width: 40%;
 			text-align: center;
 			padding: 12px;
