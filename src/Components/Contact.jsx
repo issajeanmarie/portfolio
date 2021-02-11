@@ -83,7 +83,7 @@ class Contact extends React.Component {
 				<br />
 
 				<p>
-					You can me reach through the phone number below. <br />
+					You can reach me through the phone number below. <br />
 					Or simply by clicking the icons below. <br />
 				</p>
 				<br /> <br /><br />
