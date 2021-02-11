@@ -22,6 +22,7 @@ html{
 body{
 	background: #FCFCFC;
 	font-family: Roboto, sans-serif;
+	overflow-x: hidden;
 }
 
 .header{
@@ -201,6 +202,13 @@ body{
 	.intro-text{
 		align-self: center;
 		grid-column: 2/4;
+		animation: welAnimate 1s linear 1;
+		overflow: hidden;
+	}
+
+	@keyframes welAnimate {
+		from{padding-left: 100%}
+		to{padding-left: 0;}
 	}
 
 	a{
@@ -270,19 +278,47 @@ body{
 			border-radius: 3px;
 			text-align: center;
 			overflow-wrap: break-word;
+			overflow: hidden;
 
 			h1{
 				color: $blue;
 				padding: 12px;
 				font-size: 1.5em;
+				margin-left: 0;
+				margin-right: -2000px;
 			}
 
 			p{
 				color: darken($white, 50%);
 				margin-top: 6px;
 				padding: 12px;
+				margin-right: 0;
+				margin-left: -2000px;
 			}
 		}
+
+		.asCont.scroll{
+			h1{
+				animation: animateH 1s ease-in-out 1;
+				margin-right: 0;
+			}
+
+			p{
+				animation: animateP 1s ease-in-out 1;
+				margin-left: 0;
+			}
+
+			@keyframes animateH {
+				from{margin-right: -2000px;}
+				to{margin-right: 0;}
+			}
+
+			@keyframes animateP {
+				from{margin-left: -2000px;}
+				to{margin-left: 0;}
+			}
+		}
+
 	}
 }
 
@@ -299,6 +335,35 @@ body{
 		padding: 12px;
 	}
 }
+
+
+
+.oriented.scroll{
+	overflow: hidden;
+	h1{
+		animation: animate 1s linear 1;
+		margin-top: 5%;
+	}
+
+	@keyframes animate {
+		from{margin-top: 500px;}
+		to{
+			margin-top: 5%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

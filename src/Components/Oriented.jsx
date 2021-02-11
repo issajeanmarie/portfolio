@@ -2,6 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 
 class Oriented extends React.Component {
+
+	componentDidMount() {
+		const oriented = document.querySelector('.oriented');
+
+		const options = {
+			threshold: 0.3,
+			rootMargin: '-100px'
+		};
+
+		const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+				if (!entry.isIntersecting) {
+					return;
+				} else{
+					oriented.classList.add('scroll');
+				}
+			})
+		}, options);
+
+		observer.observe(oriented)
+	}
+
 	render() {
 		const Div = styled.div`
 			background-image: url('./images/cover.jpg');
@@ -12,10 +34,13 @@ class Oriented extends React.Component {
 			width: 100%;
 			height: 620px;
 			color: #FFF;
+			overflow: hidden;
 
 			h1{
 				font-size: 4em;
-				margin: 5% 0 2% 5%;
+				margin-top: 500px;
+				margin-bottom: 5%;
+				margin-left: 5%;
 			}
 
 			p{

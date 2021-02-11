@@ -1,6 +1,29 @@
 import React from 'react'
 
 class Assurance extends React.Component {
+
+	componentDidMount() {
+		const asConts = document.querySelectorAll('.asCont');
+
+		const options = {
+			threshold: 0.3,
+			rootMargin: "-100px"
+		};
+		const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+				if (!entry.isIntersecting) {
+					return;
+				} else{					
+					entry.target.classList.add('scroll');
+				}
+			});
+		}, options);
+
+		asConts.forEach(asCont => {
+			observer.observe(asCont);
+		})
+	}
+
 	render() {
 		return (
 			<div className="assurance" id="assurance">
