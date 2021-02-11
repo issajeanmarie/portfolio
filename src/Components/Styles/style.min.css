@@ -171,7 +171,19 @@ body {
   cursor: pointer; }
 .welcome .cont-icons [class*=icon-]:hover {
   background: #26afef; }
+.welcome .cont-icons .a-1:hover .tip, .welcome .cont-icons .a-2:hover .tip, .welcome .cont-icons .a-3:hover .tip, .welcome .cont-icons .a-4:hover .tip, .welcome .cont-icons .a-5:hover .tip, .welcome .cont-icons .a-6:hover .tip {
+  animation: showTip 1s linear 1;
+  opacity: 1; }
 
+@keyframes showTip {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0.5; }
+  50% {
+    opacity: 0.8; }
+  100% {
+    opacity: 1; } }
 .assurance {
   display: grid;
   width: 98%;
