@@ -35,10 +35,11 @@ class Oriented extends React.Component {
 			height: 620px;
 			color: #FFF;
 			overflow: hidden;
+			background: red;
 
 			h1{
 				font-size: 4em;
-				margin-top: 500px;
+				margin-top: 1000px;
 				margin-bottom: 5%;
 				margin-left: 5%;
 			}

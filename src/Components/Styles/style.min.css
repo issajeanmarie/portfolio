@@ -250,7 +250,7 @@ body {
   margin-top: 5%; }
 @keyframes animate {
   from {
-    margin-top: 500px; }
+    margin-top: 1000px; }
   to {
     margin-top: 5%; } }
 @media screen and (max-width: 768px) {

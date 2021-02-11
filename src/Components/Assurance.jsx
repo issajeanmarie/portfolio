@@ -6,7 +6,7 @@ class Assurance extends React.Component {
 		const asConts = document.querySelectorAll('.asCont');
 
 		const options = {
-			threshold: 0.3,
+			threshold: 0.25,
 			rootMargin: "-100px"
 		};
 		const observer = new IntersectionObserver((entries, observer) => {
