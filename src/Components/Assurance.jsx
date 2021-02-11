@@ -81,7 +81,7 @@ class Assurance extends React.Component {
 						<h1>PUNCTUALITY</h1>
 						<p>
 							I highly respect the deadline.<br />
-							The exact time of submission will highly be respected.<br />
+							The exact time of submission will be highly respected.<br />
 							I make your time count!
 						</p>
 					</div>

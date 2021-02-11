@@ -12,7 +12,7 @@ import Contact from './Components/Contact.jsx';
 class App extends React.Component {
 	render() {
 
-		return (
+		return(
 			<React.Fragment>
 				<Header />
 				<Welcome />
@@ -23,7 +23,7 @@ class App extends React.Component {
 				<Contact></Contact>
 				<Footer />
 			</React.Fragment>
-		)
+		);
 	}
 }
 
