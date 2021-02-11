@@ -78,7 +78,7 @@ class Header extends React.Component {
 				<nav className="nav">
 					<a href="#assurance">Assurance</a>
 					<a href="#skillset">Skillset</a>
-					<a href="#work">Work</a>
+					&nbsp;
 					<a href="#contact" className="contact">Contact</a>
 				</nav>
 

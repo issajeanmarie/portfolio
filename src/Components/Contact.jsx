@@ -2,15 +2,41 @@ import React from 'react';
 import styled from 'styled-components';
 
 class Contact extends React.Component {
+
+	componentDidMount() {
+		const contact = document.querySelector('#contact');
+		const contactWrapper = document.querySelector('.contactWrapper');
+
+		const options = {
+			threshold: 0.9
+		}
+
+		const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+				if (!entry.isIntersecting) {
+					return;
+				}
+
+				contactWrapper.classList.add('scroll');
+			})
+		}, options)
+
+		observer.observe(contact);
+	}
+
 	render() {
 
 		const Contact = styled.div`
 			text-align: center;
 			display: block;
+			position: relative;
+			overflow: hidden;
 		`;
 
 		return (
 			<Contact className="welcome" id="contact">
+
+				<div className="contactWrapper"></div>
 
 				<h2>
 					How can I get to you?

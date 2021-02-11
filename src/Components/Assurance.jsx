@@ -5,11 +5,11 @@ class Assurance extends React.Component {
 	componentDidMount() {
 		const asConts = document.querySelectorAll('.asCont');
 
-		const options = {
-			threshold: 0.25,
+		const optionsAss = {
+			threshold: 0.1,
 			rootMargin: "-100px"
 		};
-		const observer = new IntersectionObserver((entries, observer) => {
+		const observerAs = new IntersectionObserver((entries, observerAs) => {
 			entries.forEach(entry => {
 				if (!entry.isIntersecting) {
 					return;
@@ -17,10 +17,10 @@ class Assurance extends React.Component {
 					entry.target.classList.add('scroll');
 				}
 			});
-		}, options);
+		}, optionsAss);
 
 		asConts.forEach(asCont => {
-			observer.observe(asCont);
+			observerAs.observe(asCont);
 		})
 	}
 
@@ -35,8 +35,8 @@ class Assurance extends React.Component {
 					<div className="asCont">
 						<h1>COMMUNICATION</h1>
 						<p>
-							We will get through every step of the project development together
-							I will keep you posted on any project improvement.
+							We will get through every step of the project development together<br />
+							I will keep you posted on any project improvement.<br />
 							And you will be free to ask for any changes.
 						</p>
 					</div>
@@ -50,8 +50,8 @@ class Assurance extends React.Component {
 					<div className="asCont">
 						<h1>ACCURACY</h1>
 						<p>
-							I give exactly what you asked for! No deceiving.
-							You are totally free to complain anytime not certisfied by  my product.
+							I give exactly what you asked for! No deceiving.<br />
+							You are totally free to complain anytime not satisfied by  my product.<br />
 							I give the accurate products!
 						</p>
 					</div>
@@ -65,8 +65,8 @@ class Assurance extends React.Component {
 					<div className="asCont">
 						<h1>INTEGRITY</h1>
 						<p>
-							Handing your problem to me is the first trust, I appreciate that!
-							Keep that trust and you won't regret it.
+							Handing your problem to me is the first trust, I appreciate that!<br />
+							Keep that trust and you won't regret it.<br />
 							I keep my word! 
 						</p>
 					</div>
@@ -80,8 +80,8 @@ class Assurance extends React.Component {
 					<div className="asCont">
 						<h1>PUNCTUALITY</h1>
 						<p>
-							I highly respect the deadline.
-							The exact time of submission will highly be respected.
+							I highly respect the deadline.<br />
+							The exact time of submission will highly be respected.<br />
 							I make your time count!
 						</p>
 					</div>

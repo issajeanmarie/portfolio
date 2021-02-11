@@ -32,14 +32,13 @@ class Oriented extends React.Component {
 			background-attachment: fixed;
 			padding: 12px;
 			width: 100%;
-			height: 620px;
+			height: 630px;
 			color: #FFF;
 			overflow: hidden;
-			background: red;
 
 			h1{
 				font-size: 4em;
-				margin-top: 1000px;
+				margin-top: 600px;
 				margin-bottom: 5%;
 				margin-left: 5%;
 			}
@@ -54,7 +53,7 @@ class Oriented extends React.Component {
 				height: auto;
 				h1{
 					font-size: 2.3em;
-					margin-top: 20%;
+					margin-top: -600px;
 				}
 
 				p{ font-size: 1em; margin-top: 5%; }

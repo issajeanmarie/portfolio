@@ -2,6 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 
 class Skillset extends React.Component {
+
+	componentDidMount() {
+		const skillset = document.querySelector('.skillset');
+		const SubSecs = document.querySelectorAll('.SubSec');
+		const options = {threshold: 0.7}
+
+		const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+
+				if (!entry.isIntersecting) {
+					return;
+				}
+
+				SubSecs.forEach(SubSec => {
+					SubSec.classList.add('scroll');
+				})
+
+			})			
+
+		}, options);
+
+		SubSecs.forEach(SubSec => {
+			observer.observe(skillset);
+		})
+	}
+
 	render() {
 
 		const elements = [
@@ -37,6 +63,7 @@ class Skillset extends React.Component {
 				display: flex;
 				align-items: center;
 				margin: 4%;
+				opacity: 0.2;
 
 				.imgCont{
 					width: auto;
@@ -50,6 +77,11 @@ class Skillset extends React.Component {
 				p{
 					margin-left: 5px;
 				}
+			}
+
+			.SubSec.scroll{
+				transition: 1.3s;
+				opacity: 1;
 			}
 		`;
 

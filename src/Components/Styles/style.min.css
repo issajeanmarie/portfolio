@@ -248,11 +248,38 @@ body {
 .oriented.scroll h1 {
   animation: animate 1s linear 1;
   margin-top: 5%; }
+@media screen and (max-width: 768px) {
+  .oriented.scroll h1 {
+    animation: animate 1s linear 1; } }
 @keyframes animate {
   from {
-    margin-top: 1000px; }
+    margin-top: 600px; }
   to {
     margin-top: 5%; } }
+.contactWrapper {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 1s; }
+
+.contactWrapper.scroll {
+  animation: scroll 2s ease-in-out 1;
+  top: -100%; }
+
+@keyframes scroll {
+  0% {
+    top: 0; }
+  20% {
+    top: -50%; }
+  50% {
+    top: -60%; }
+  100% {
+    top: -100%; } }
 @media screen and (max-width: 768px) {
   .nav-respo {
     display: block; }
